@@ -53,31 +53,31 @@ public class ServicesSer {
 		 return cur;
 	 }
 //	 
-	 public int bookARoom(Booking booking){
-		 UUID uuid = UUID.randomUUID();  
-		 booking.setBookingId(uuid.toString());
+	 // public int bookARoom(Booking booking){
+		//  UUID uuid = UUID.randomUUID();  
+		//  booking.setBookingId(uuid.toString());
 		 
-		 int room=booking.getNoOfRooms();
-		 String name=booking.getHotelName();
+		//  int room=booking.getNoOfRooms();
+		//  String name=booking.getHotelName();
 		 
-		 Hotel cur=rp.hote.get(name);
-		 int price=cur.getPricePerNight();
-		 int avail=cur.getAvailableRooms();
-		 if(avail==0) {
-			 return -1;
-		 }
-		 else {
-			 booking.setAmountToBePaid(room*price);
-			 return booking.getAmountToBePaid();
-		 }
+		//  Hotel cur=rp.hote.get(name);
+		//  int price=cur.getPricePerNight();
+		//  int avail=cur.getAvailableRooms();
+		//  if(avail==0) {
+		// 	 return -1;
+		//  }
+		//  else {
+		// 	 booking.setAmountToBePaid(room*price);
+		// 	 return booking.getAmountToBePaid();
+		//  }
 		 
-	     //The booking object coming from postman will have all the attributes except bookingId and amountToBePaid;
+	 //     //The booking object coming from postman will have all the attributes except bookingId and amountToBePaid;
 	        
-	        //save the booking Entity and keep the bookingId as a primary key
-	        //Calculate the total amount paid by the person based on no. of rooms booked and price of the room per night.
-	        //If there arent enough rooms available in the hotel that we are trying to book return -1 
-	        //in other case return total 
-	 }
+	 //        //save the booking Entity and keep the bookingId as a primary key
+	 //        //Calculate the total amount paid by the person based on no. of rooms booked and price of the room per night.
+	 //        //If there arent enough rooms available in the hotel that we are trying to book return -1 
+	 //        //in other case return total 
+	 // }
    
 	 
 
